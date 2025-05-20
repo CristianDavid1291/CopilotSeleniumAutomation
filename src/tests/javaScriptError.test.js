@@ -30,8 +30,7 @@ describe('JavaScript Error Tests', function() {
     it('should check for JavaScript error message', async function() {
         const errorMessage = await javaScriptErrorPage.getErrorMessage();
         console.log('JavaScript error message:', errorMessage);
-        expect(errorMessage).to.be.empty;
-        
+        expect(errorMessage).to.be.empty;        
     });
 
 });
