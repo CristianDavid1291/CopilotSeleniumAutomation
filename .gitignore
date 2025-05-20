@@ -23,3 +23,6 @@ selenium-debug.log
 # Test output
 coverage/
 test-results/
+
+# screenshots
+screenshots/
