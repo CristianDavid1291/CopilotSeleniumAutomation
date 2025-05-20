@@ -27,6 +27,12 @@ class LoginPage {
         await alert.accept();
     }
 
+    async getResultText() {
+        const result = await this.driver.findElement({ css: '#flash' });
+        return await result.getText();
+    }
+
+    
         async acceptGoogleChangePassword() {
         // Wait for the Google Change Password dialog and click "Accept"
         try {
