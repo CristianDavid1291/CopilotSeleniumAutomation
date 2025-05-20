@@ -9,12 +9,8 @@ class DragAndDropPage {
         const source = await this.driver.findElement(By.id(sourceId));
         const target = await this.driver.findElement(By.id(targetId));
 
-        await this.driver.actions({ bridge: true })
-            .move({ origin: source })
-            .press()
-            .move({ origin: target })
-            .release()
-            .perform();
+        const actions = this.driver.actions({ async: true });
+        await actions.dragAndDrop(source, target).perform();
     }
 
     async getColumnText(columnId) {
