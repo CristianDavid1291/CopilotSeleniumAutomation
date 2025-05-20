@@ -1,0 +1,21 @@
+config:
+  target: "https://the-internet.herokuapp.com"
+  phases:
+    - duration: 5
+      arrivalRate: 2
+  defaults:
+    headers:
+      User-Agent: "Artillery Performance Test"
+
+scenarios:
+  - flow:
+      - get:
+          url: "/"
+  - flow:
+      - get:
+          url: "/login"
+      - post:
+          url: "/login"
+          json:
+            username: "tomsmith"
+            password: "SuperSecretPassword!"
