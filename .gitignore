@@ -1,0 +1,25 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Selenium/Chrome profiles
+/tmp/
+chrome-test-profile/
+selenium-debug.log
+
+# Environment files
+.env
+
+# Test output
+coverage/
+test-results/
