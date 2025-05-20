@@ -30,7 +30,7 @@ describe('Login Tests', function() {
     }
 
     before(async function() {
-        const filePath = path.join(__dirname, 'credentials.csv');
+        const filePath = path.join(__dirname, '../data/credentials.csv');
         testData = await readCSV(filePath);
         const chromeOptions = new chrome.Options();
         chromeOptions.addArguments(

@@ -6,6 +6,7 @@ const { expect } = require('chai');
 const chrome = require('selenium-webdriver/chrome');
 const fs = require('fs');
 const { json } = require('stream/consumers');
+const path = require('path');
 
 describe('Login Tests', function() {
     let driver;
@@ -31,7 +32,7 @@ describe('Login Tests', function() {
     });
 
     it('Data Driven Test for Login', async function() {
-        const testData = JSON.parse(fs.readFileSync('src/tests/credentials.json', 'utf8'));
+        const testData = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/credentials.json'), 'utf8'));
         for (const data of testData) {
             await loginPage.enterUsername(data.username);
             await loginPage.enterPassword(data.password);
