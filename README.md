@@ -7,16 +7,19 @@ This project contains automated Selenium tests for the website [https://the-inte
 ```
 herokuapp-selenium-tests
 ├── src
-│   ├── pages
-│   │   ├── loginPage.js
-│   │   ├── checkboxPage.js
-│   │   ├── dropdownPage.js
-│   │   └── ... (other page files)
-│   └── tests
-│       ├── login.test.js
-│       ├── checkbox.test.js
-│       ├── dropdown.test.js
-│       └── ... (other test files)
+│   └── pages
+│       ├── loginPage.js
+│       ├── checkboxPage.js
+│       ├── dropdownPage.js
+│       ├── ... (other page files)
+├── tests
+│   ├── login.test.js
+│   ├── checkbox.test.js
+│   ├── dropdown.test.js
+│   ├── ... (other test files)
+├── data
+│   ├── credentials.json
+│   └── credentials.csv
 ├── package.json
 ├── .gitignore
 └── README.md
@@ -37,9 +40,9 @@ herokuapp-selenium-tests
    ```
 
 3. **Run the tests**:
-   You can run the tests using a testing framework like Mocha or Jest. For example, if using Mocha:
+   You can run the tests using Mocha:
    ```
-   npx mocha src/tests/*.test.js
+   npx mocha tests/*.test.js
    ```
 
 ## Usage
@@ -47,6 +50,7 @@ herokuapp-selenium-tests
 - Each test file contains separate functions for different test cases.
 - Each function includes a static wait of 5 seconds after performing operations for manual verification.
 - The page files contain classes with methods to interact with the respective elements on the website.
+- Test data (such as credentials) is stored in the `data` directory.
 
 ## Contributing
 
